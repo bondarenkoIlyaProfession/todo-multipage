@@ -1,0 +1,23 @@
+:root {
+  --white: #fff;
+  --gunmetal: #2b2d42;
+  --cool-grey: #8d99ae;
+  --anti-flash-white: #edf2f4;
+  --imperial-red: #ef233c;
+  --candy-red: #d90429;
+  --lotion: #fafafa;
+
+  --average-transition: all 0.3s ease-in-out;
+}
+
+@mixin aside-title {
+  color: var(--gunmetal);
+  background-color: transparent;
+  text-transform: capitalize;
+  width: 95%;
+  font-size: 20px;
+  line-height: 44px;
+  padding: 0px 10px;
+  border-radius: 3px;
+  margin: 5px 0;
+}

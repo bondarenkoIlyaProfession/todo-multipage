@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'SF Rounded';
+  position: relative;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.content {
+  flex: 1 0 auto;
+  width: calc(100% - 350px);
+  margin-left: 350px;
+
+  &-only {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.main {
+  height: 100%;
+}
