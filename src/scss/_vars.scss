@@ -6,22 +6,25 @@
   --imperial-red: #ef233c;
   --candy-red: #d90429;
   --lotion: #fafafa;
-  --grey: #888888;
+  --grey: #888;
+  --background-primary: rgba(255 255 255 / 30.2%);
+  --background-secondary: #eee;
 
-  --background-primary: rgba(255, 255, 255, 0.302);
-  --background-secondary: #eeeeee;
-
+  // transitions (for stylelint)
   --average-transition: all 0.3s ease-in-out;
+
+  // font-families (for stylelint)
+  --font-family-common: 'SF Rounded';
 }
 
 @mixin aside-title {
-  color: var(--gunmetal);
-  background-color: transparent;
-  text-transform: capitalize;
   width: 95%;
+  padding: 0 10px;
+  margin: 5px 0;
   font-size: 20px;
   line-height: 44px;
-  padding: 0px 10px;
+  color: var(--gunmetal);
+  text-transform: capitalize;
+  background-color: transparent;
   border-radius: 3px;
-  margin: 5px 0;
 }

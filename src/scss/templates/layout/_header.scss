@@ -17,11 +17,11 @@
   }
 
   &__action {
-    margin-right: 20px;
-    border-radius: 3px;
     padding: 3px;
-    background-color: transparent;
+    margin-right: 20px;
     cursor: pointer;
+    background-color: transparent;
+    border-radius: 3px;
 
     &:hover {
       background-color: var(--background-primary);
@@ -35,9 +35,9 @@
   &__hamburger-menu {
     &-bar {
       display: block;
-      margin: 3px 0;
       width: 20px;
       height: 2px;
+      margin: 3px 0;
       background-color: var(--white);
       transition: var(--average-transition);
     }
@@ -66,8 +66,8 @@
 
   &__search-icon {
     position: absolute;
-    left: 5%;
     top: 20%;
+    left: 5%;
     color: var(--white);
     cursor: pointer;
   }

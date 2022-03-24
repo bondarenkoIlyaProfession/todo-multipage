@@ -1,9 +1,9 @@
 .tasks {
   &__header {
-    padding-top: 60px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
   }
 
   &__title {
@@ -11,11 +11,11 @@
   }
 
   &__status {
-    opacity: 1;
-    visibility: visible;
-    padding-top: 160px;
     display: flex;
     justify-content: center;
+    padding-top: 160px;
+    visibility: visible;
+    opacity: 1;
 
     &-inner {
       text-align: center;
@@ -31,9 +31,9 @@
     }
 
     &-subtitle {
-      color: var(--grey);
       padding-top: 5px;
       font-size: 16px;
+      color: var(--grey);
     }
   }
 

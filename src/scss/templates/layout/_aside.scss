@@ -1,17 +1,17 @@
 .aside {
-  background-color: var(--lotion);
-  transition: var(--average-transition);
   position: fixed;
   top: 0;
   bottom: 0;
   left: -358px;
-  height: 100vh;
   width: 358px;
+  height: 100vh;
   padding: 100px 0 0 50px;
+  background-color: var(--lotion);
+  transition: var(--average-transition);
 
   &-active {
-    transition: var(--average-transition);
     left: 0;
+    transition: var(--average-transition);
   }
 
   &-inner {
@@ -22,15 +22,15 @@
 
   .accordion {
     &__toggle-inner {
-      transition: var(--average-transition);
-      background-color: transparent;
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 24px;
+      justify-content: center;
       width: 24px;
-      border-radius: 50%;
+      height: 24px;
       margin-left: 10px;
+      background-color: transparent;
+      border-radius: 50%;
+      transition: var(--average-transition);
 
       &:hover {
         background-color: var(--anti-flash-white);
@@ -44,17 +44,18 @@
     &__title {
       @include aside-title;
 
-      background-color: transparent;
       display: flex;
       align-items: center;
       font-weight: 400;
       user-select: none;
+      background-color: transparent;
     }
   }
 
   .nav {
     &__link {
       @include aside-title;
+
       display: block;
 
       &:hover {
@@ -66,19 +67,19 @@
       }
 
       &-additional {
-        color: var(--gunmetal);
-        background-color: transparent;
-        text-transform: capitalize;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 30px;
         width: 95%;
+        height: 30px;
+        padding: 2px 10px;
+        margin: 5px 0 5px 7px;
         font-size: 17px;
         line-height: 24px;
-        padding: 2px 10px;
+        color: var(--gunmetal);
+        text-transform: capitalize;
+        background-color: transparent;
         border-radius: 3px;
-        margin: 5px 0 5px 7px;
 
         &:hover {
           background-color: var(--anti-flash-white);

@@ -5,29 +5,29 @@
   &__item {
     display: flex;
     align-items: center;
-    margin-right: 20px;
     padding: 6px;
-    border-radius: 3px;
-    background-color: transparent;
-    transition: var(--average-transition);
+    margin-right: 20px;
     color: var(--grey);
-
-    &:hover {
-      background-color: var(--background-secondary);
-      color: var(--gunmetal);
-      cursor: pointer;
-    }
-
-    &:hover &-icon {
-      color: var(--gunmetal);
-    }
+    background-color: transparent;
+    border-radius: 3px;
+    transition: var(--average-transition);
 
     &-icon {
       display: flex;
       align-items: center;
-      color: var(--grey);
       padding-right: 10px;
+      color: var(--grey);
       transition: var(--average-transition);
+    }
+
+    &:hover {
+      color: var(--gunmetal);
+      cursor: pointer;
+      background-color: var(--background-secondary);
+    }
+
+    &:hover &-icon {
+      color: var(--gunmetal);
     }
   }
 }

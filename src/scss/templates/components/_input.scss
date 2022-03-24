@@ -1,13 +1,13 @@
 .input {
+  width: 205px;
+  padding: 5px 10px;
+  font-family: var(--font-family-common);
+  font-size: 14px;
   color: var(--white);
   background-color: var(--background-primary);
-  font-family: 'SF Rounded';
   border: none;
-  outline: none;
-  width: 205px;
-  font-size: 14px;
   border-radius: 3px;
-  padding: 5px 10px;
+  outline: none;
 
   &::placeholder {
     color: var(--white);
