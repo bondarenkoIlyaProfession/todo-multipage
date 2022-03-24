@@ -1,54 +1,43 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import {
-  BsHouseDoor,
-  BsReverseLayoutTextWindowReverse,
-  BsPlusLg,
-  BsFillPersonFill,
-  BsSearch,
-} from 'react-icons/bs';
+import { BsHouseDoor, BsPlusLg, BsFillPersonFill, BsSearch } from 'react-icons/bs';
 
 import { Input } from '../components';
 
 export const Header = ({ toggleAside }) => {
   return (
-    <header className='header'>
-      <div className='container'>
-        <div className='header-inner'>
-          <div className='header-left'>
-            <div className='header__action header__hamburger-menu' onClick={toggleAside}>
-              <span></span>
-              <span></span>
-              <span></span>
+    <header className="header">
+      <div className="container">
+        <div className="header-inner">
+          <div className="header-left">
+            <div className="header__action header__hamburger-menu" onClick={toggleAside}>
+              <span className="header__hamburger-menu-bar"></span>
+              <span className="header__hamburger-menu-bar"></span>
+              <span className="header__hamburger-menu-bar"></span>
             </div>
 
-            <div className='header__action header__house'>
-              <BsHouseDoor size='20px' title='home page' />
-            </div>
+            <Link to="/" className="header__action header__house">
+              <BsHouseDoor size="20px" title="Home Page" />
+            </Link>
 
-            <form className='header__form'>
-              <BsSearch className='header__search-icon' size='16px' />
+            <form className="header__form">
+              <BsSearch className="header__search-icon" size="16px" title="Search" />
               <Input
-                type='text'
-                id='header__search'
-                className='header__search'
-                placeholder='Search'
+                type="text"
+                id="header__search"
+                className="header__search"
+                placeholder="Search"
               />
             </form>
           </div>
 
-          <div className='header-center'>
-            <div className='header__action header__logo'>
-              <BsReverseLayoutTextWindowReverse size='20px' title='web-site logotype' />
+          <div className="header-right">
+            <div className="header__action header__add-task">
+              <BsPlusLg size="16px" title="Add a task" />
             </div>
-          </div>
-
-          <div className='header-right'>
-            <div className='header__action header__add-task'>
-              <BsPlusLg size='16px' title='add task' />
-            </div>
-            <div className='header__action header__user'>
-              <BsFillPersonFill size='20px' title='user opportunities' />
+            <div className="header__action header__user">
+              <BsFillPersonFill size="20px" title="User opportunities" />
             </div>
           </div>
         </div>

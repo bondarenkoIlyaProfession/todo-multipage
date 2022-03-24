@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import { FiChevronDown } from 'react-icons/fi';
+import { FiChevronDown } from "react-icons/fi";
 
-export const Accordion = ({ children, title, className }) => {
+export function Accordion({ children, title, className }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const classes = classNames('accordion', className);
+  const classes = classNames("accordion", className);
 
   return (
     <div className={classes}>
-      <div className='accordion__title' onClick={() => setIsOpen(!isOpen)}>
+      <div
+        className='accordion__title'
+        onClick={() => setIsOpen(!isOpen)}
+        aria-hidden='true'
+        role='button'
+        tabIndex='0'>
         <span>{title}</span>
 
         <div className='accordion__toggle-inner'>
@@ -24,7 +29,7 @@ export const Accordion = ({ children, title, className }) => {
       </div>
     </div>
   );
-};
+}
 
 Accordion.propTypes = {
   children: PropTypes.node.isRequired,
@@ -33,6 +38,6 @@ Accordion.propTypes = {
 };
 
 Accordion.defaultProps = {
-  title: 'Default Accordion',
-  className: '',
+  title: "Default Accordion",
+  className: "",
 };

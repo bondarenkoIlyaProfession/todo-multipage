@@ -36,7 +36,7 @@
         background-color: var(--anti-flash-white);
       }
 
-      & > svg {
+      & svg {
         margin-left: 0;
       }
     }
@@ -61,7 +61,11 @@
         background-color: var(--anti-flash-white);
       }
 
-      &_additional {
+      &-active {
+        background-color: var(--anti-flash-white);
+      }
+
+      &-additional {
         color: var(--gunmetal);
         background-color: transparent;
         text-transform: capitalize;
@@ -79,10 +83,6 @@
         &:hover {
           background-color: var(--anti-flash-white);
         }
-      }
-
-      &-active {
-        background-color: var(--anti-flash-white);
       }
     }
   }

@@ -4,7 +4,11 @@
 
 @import './templates/layout/header';
 @import './templates/layout/aside';
+@import './templates/layout/tasks';
+
 @import './templates/layout/error';
 
 @import './templates/components/input';
 @import './templates/components/accordion';
+@import './templates/components/tag';
+@import './templates/components/addTask';

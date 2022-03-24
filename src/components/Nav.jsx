@@ -32,16 +32,16 @@ export const Nav = ({ className }) => {
       </ul>
 
       <Accordion title='Additional'>
-        <ul className='nav__list_additional'>
+        <ul className='nav__list-additional'>
           {NavItemsAdditional &&
             NavItemsAdditional.map(({ title, link }, index) => {
               return (
-                <li className='nav__item_additional' key={index}>
+                <li className='nav__item-additional' key={index}>
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? 'nav__link_additional nav__link-active aside__tasks-personal'
-                        : 'nav__link_additional aside__tasks-personal'
+                        ? 'nav__link-additional nav__link-active aside__tasks-personal'
+                        : 'nav__link-additional aside__tasks-personal'
                     }
                     to={link}>
                     {title}

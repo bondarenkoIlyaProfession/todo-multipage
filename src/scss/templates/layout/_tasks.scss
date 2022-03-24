@@ -1,0 +1,43 @@
+.tasks {
+  &__header {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 26px;
+  }
+
+  &__status {
+    opacity: 1;
+    visibility: visible;
+    padding-top: 160px;
+    display: flex;
+    justify-content: center;
+
+    &-inner {
+      text-align: center;
+    }
+
+    &-image {
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      font-size: 20px;
+      color: var(--gunmetal);
+    }
+
+    &-subtitle {
+      color: var(--grey);
+      padding-top: 5px;
+      font-size: 16px;
+    }
+  }
+
+  &__add-tasks {
+    padding-top: 30px;
+  }
+}

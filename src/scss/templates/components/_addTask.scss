@@ -1,0 +1,17 @@
+.add-task {
+  display: flex;
+  align-items: center;
+  color: var(--gunmetal);
+  transition: var(--average-transition);
+
+  &:hover {
+    color: var(--imperial-red);
+    cursor: pointer;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+}
