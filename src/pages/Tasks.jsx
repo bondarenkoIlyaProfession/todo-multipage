@@ -18,7 +18,7 @@ export const Tasks = () => {
 
             <div className="tasks-right">
               <ul className="tags tags__list tasks__tags-list">
-                {TagItems && TagItems.map(tag => <Tag {...tag} />)}
+                {TagItems && TagItems.map(tag => <Tag className="tasks__tags-item" {...tag} />)}
               </ul>
             </div>
           </div>

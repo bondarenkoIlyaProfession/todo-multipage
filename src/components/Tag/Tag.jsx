@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import { TagItem } from './TagItem';
 
-export const Tag = ({ tagText, icon }) => {
+export const Tag = ({ tagText, icon, className }) => {
+  const classes = classNames('tags__item', className);
+
   return (
-    <li className="tags__item tasks__tags-item">
+    <li className={classes}>
       <div className="tags__item-icon tasks__tags-icon">{icon}</div>
       <TagItem text={tagText} />
     </li>
@@ -15,11 +18,11 @@ export const Tag = ({ tagText, icon }) => {
 Tag.propTypes = {
   tagText: PropTypes.string,
   icon: PropTypes.elementType,
-  onClick: PropTypes.func,
+  className: PropTypes.string,
 };
 
 Tag.defaultProps = {
   tagText: '',
   icon: null,
-  onClick: () => {},
+  className: '',
 };
