@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
 export const TagItem = ({ text, className }) => {
-  const classes = classNames('tag__item', className);
+  const classes = classNames("tag__item", className);
 
   return (
     <div className={classes}>
@@ -18,5 +18,5 @@ TagItem.propTypes = {
 };
 
 TagItem.defaultProps = {
-  className: '',
+  className: "",
 };

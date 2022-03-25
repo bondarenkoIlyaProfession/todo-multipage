@@ -1,16 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-export const Button = ({ children, onClick, className, disabled, active, ...attrs }) => {
-  const onClickAction = e => (disabled ? e.preventDefault() : onClick(e));
+export const Button = ({
+  children,
+  onClick,
+  className,
+  disabled,
+  active,
+  ...attrs
+}) => {
+  const onClickAction = (e) => (disabled ? e.preventDefault() : onClick(e));
 
-  const classes = classNames('btn', className, { active });
+  const classes = classNames("btn", className, { active });
 
-  const Tag = attrs.to ? 'Link' : 'button';
+  const Tag = attrs.to ? "Link" : "button";
 
   return (
-    <Tag {...attrs} className={classes} disabled={disabled} onClick={onClickAction}>
+    <Tag
+      {...attrs}
+      className={classes}
+      disabled={disabled}
+      onClick={onClickAction}
+    >
       {children}
     </Tag>
   );
@@ -21,13 +33,13 @@ Button.propTypes = {
   onClick: PropTypes.func,
   className: PropTypes.string,
   disabled: PropTypes.bool,
-  attrs: PropTypes.bool,
+  active: PropTypes.bool,
 };
 
 Button.defaultProps = {
-  children: 'Default button',
+  children: "Default button",
   onClick: () => {},
-  className: '',
+  className: "",
   disabled: false,
   active: false,
 };

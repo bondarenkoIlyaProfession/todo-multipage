@@ -1,9 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { BsHouseDoor, BsPlusLg, BsFillPersonFill, BsSearch } from 'react-icons/bs';
+import { Link } from "react-router-dom";
 
-import { Input } from '../components';
+import {
+  BsHouseDoor,
+  BsPlusLg,
+  BsFillPersonFill,
+  BsSearch,
+} from "react-icons/bs";
+
+import { Input } from "../components";
 
 export const Header = ({ toggleAside }) => {
   return (
@@ -11,10 +18,14 @@ export const Header = ({ toggleAside }) => {
       <div className="container">
         <div className="header-inner">
           <div className="header-left">
-            <div className="header__action header__hamburger-menu" onClick={toggleAside}>
-              <span className="header__hamburger-menu-bar"></span>
-              <span className="header__hamburger-menu-bar"></span>
-              <span className="header__hamburger-menu-bar"></span>
+            <div
+              className="header__action header__hamburger-menu"
+              onClick={toggleAside}
+              aria-hidden="true"
+            >
+              <span className="header__hamburger-menu-bar" />
+              <span className="header__hamburger-menu-bar" />
+              <span className="header__hamburger-menu-bar" />
             </div>
 
             <Link to="/" className="header__action header__house">
@@ -22,7 +33,11 @@ export const Header = ({ toggleAside }) => {
             </Link>
 
             <form className="header__form">
-              <BsSearch className="header__search-icon" size="16px" title="Search" />
+              <BsSearch
+                className="header__search-icon"
+                size="16px"
+                title="Search"
+              />
               <Input
                 type="text"
                 id="header__search"
@@ -44,4 +59,12 @@ export const Header = ({ toggleAside }) => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  toggleAside: PropTypes.func,
+};
+
+Header.defaultProps = {
+  toggleAside: "",
 };

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import projectPlanning from '../assets/images/projectPlanning.svg';
+import projectPlanning from "../assets/images/projectPlanning.svg";
 
-import { Image, AddTask, Tag } from '../components';
+import { Image, AddTask, Tag } from "../components";
 
-import { TagItems } from '../data/TagItems';
+import { TagItems } from "../data/TagItems";
 
 export const Tasks = () => {
   return (
@@ -18,7 +18,10 @@ export const Tasks = () => {
 
             <div className="tasks-right">
               <ul className="tags tags__list tasks__tags-list">
-                {TagItems && TagItems.map(tag => <Tag className="tasks__tags-item" {...tag} />)}
+                {TagItems &&
+                  TagItems.map((tag) => (
+                    <Tag className="tasks__tags-item" {...tag} />
+                  ))}
               </ul>
             </div>
           </div>
@@ -36,7 +39,9 @@ export const Tasks = () => {
                 className="tasks__status-image"
               />
               <div className="tasks__status-title">All clear</div>
-              <div className="tasks__status-subtitle">Looks like everything's organized</div>
+              <div className="tasks__status-subtitle">
+                Looks like everything&apos;s organized
+              </div>
             </div>
           </div>
         </div>

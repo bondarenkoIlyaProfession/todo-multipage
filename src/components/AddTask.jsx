@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import { FiPlusCircle } from 'react-icons/fi';
+import { FiPlusCircle } from "react-icons/fi";
 
 export const AddTask = ({ text, className, withIcon }) => {
-  const classes = classNames('add-task', className);
+  const classes = classNames("add-task", className);
 
   return (
     <div className={classes}>
@@ -22,7 +22,7 @@ AddTask.propTypes = {
 };
 
 AddTask.defaultProps = {
-  text: 'Add task',
-  className: '',
+  text: "Add task",
+  className: "",
   withIcon: true,
 };

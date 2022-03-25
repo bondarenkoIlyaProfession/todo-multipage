@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import './scss/styles.scss';
+import "./scss/styles.scss";
 
-import { App } from './App';
+import { App } from "./App";
 
-import { Tasks, Today, Personal, Work, GroceryStore, Error } from './pages';
+import { Tasks, Today, Personal, Work, GroceryStore, Error } from "./pages";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,5 +23,5 @@ ReactDOM.render(
       </App>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById("root")
 );

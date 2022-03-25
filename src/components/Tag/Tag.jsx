@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import { TagItem } from './TagItem';
+import { TagItem } from "./TagItem";
 
 export const Tag = ({ tagText, icon, className }) => {
-  const classes = classNames('tags__item', className);
+  const classes = classNames("tags__item", className);
 
   return (
     <li className={classes}>
@@ -22,7 +22,7 @@ Tag.propTypes = {
 };
 
 Tag.defaultProps = {
-  tagText: '',
+  tagText: "",
   icon: null,
-  className: '',
+  className: "",
 };
