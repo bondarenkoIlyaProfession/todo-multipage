@@ -31,8 +31,8 @@ Image.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
   className: PropTypes.string,
-  width: PropTypes.number,
-  height: PropTypes.number,
+  width: PropTypes.string,
+  height: PropTypes.string,
   circle: PropTypes.bool,
 };
 
@@ -40,7 +40,7 @@ Image.defaultProps = {
   src: "",
   alt: "image name",
   className: "",
-  width: 100,
-  height: 100,
+  width: "100px",
+  height: "100px",
   circle: false,
 };

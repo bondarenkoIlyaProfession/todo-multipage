@@ -1,36 +1,41 @@
 import React from "react"; // ESLint gives an error due to the absence of this import
 
 import {
-  BsFillChatRightTextFill,
+  BsChatRightTextFill,
   BsSliders,
   BsThreeDots,
+  BsCalendar2WeekFill,
+  BsInboxFill,
+  BsTagsFill,
+  BsFlagFill,
+  BsAlarmFill,
 } from "react-icons/bs";
 
 export const TagItems = [
-  { tagText: "Comments", icon: <BsFillChatRightTextFill size="20px" /> },
+  { tagText: "Comments", icon: <BsChatRightTextFill size="20px" /> },
   { tagText: "View", icon: <BsSliders size="20px" /> },
   { tagText: "More", icon: <BsThreeDots size="20px" /> },
 ];
 
 export const TagItemsAddTaskLeft = [
-  { tagText: "0", icon: <BsThreeDots size="20px" /> },
-  { tagText: "1", icon: <BsThreeDots size="20px" /> },
+  { tagText: "Schedule", icon: <BsCalendar2WeekFill size="20px" /> },
+  { tagText: "Inbox", icon: <BsInboxFill size="20px" /> },
 ];
 
 export const TagItemsAddTaskRight = [
   {
     tagText: "",
-    icon: <BsThreeDots size="20px" />,
+    icon: <BsTagsFill size="20px" />,
     className: "tags__item-without-text",
   },
   {
     tagText: "",
-    icon: <BsThreeDots size="20px" />,
+    icon: <BsFlagFill size="20px" />,
     className: "tags__item-without-text",
   },
   {
     tagText: "",
-    icon: <BsThreeDots size="20px" />,
+    icon: <BsAlarmFill size="20px" />,
     className: "tags__item-without-text",
   },
 ];

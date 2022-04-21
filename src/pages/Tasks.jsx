@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import projectPlanning from "../assets/images/projectPlanning.svg";
 
@@ -20,7 +21,7 @@ export const Tasks = () => {
               <ul className="tags tags__list tasks__tags-list">
                 {TagItems &&
                   TagItems.map((tag) => (
-                    <Tag className="tasks__tags-item" {...tag} />
+                    <Tag className="tasks__tags-item" key={uuidv4()} {...tag} />
                   ))}
               </ul>
             </div>

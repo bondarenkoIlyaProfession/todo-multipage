@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import uuid from "react-uuid";
+import PropTypes, { shape } from "prop-types";
+import { v4 as uuidv4 } from "uuid";
 
 import { FiPlusCircle } from "react-icons/fi";
 
@@ -77,14 +77,14 @@ export const CreateTask = ({ addTask }) => {
               placeholder="Title"
               maxLength={90}
               className="add-task__title-area"
-              titleValue={titleValue}
+              value={titleValue}
               onChange={({ target }) => setTitleValue(target.value)}
             />
 
             <textarea
               placeholder="Description"
               className="add-task__description-area"
-              descriptionValue={descriptionValue}
+              value={descriptionValue}
               onChange={({ target }) => setDescriptionValue(target.value)}
             />
           </div>
@@ -92,12 +92,16 @@ export const CreateTask = ({ addTask }) => {
           <div className="add-task__list">
             <ul className="add-task__list-left">
               {TagItemsAddTaskLeft &&
-                TagItemsAddTaskLeft.map((tag) => <Tag {...tag} />)}
+                TagItemsAddTaskLeft.map((tag) => (
+                  <Tag key={uuidv4()} {...tag} />
+                ))}
             </ul>
 
             <ul className="add-task__list-right">
               {TagItemsAddTaskRight &&
-                TagItemsAddTaskRight.map((tag) => <Tag {...tag} />)}
+                TagItemsAddTaskRight.map((tag) => (
+                  <Tag key={uuidv4()} {...tag} />
+                ))}
             </ul>
           </div>
         </div>
@@ -154,7 +158,7 @@ export const Todo = () => {
               index={index}
               completeTask={completeTask}
               removeTask={removeTask}
-              key={uuid()}
+              key={uuidv4()}
             />
           );
         })}
@@ -164,14 +168,13 @@ export const Todo = () => {
 };
 
 Task.propTypes = {
-  task: PropTypes.node,
+  task: shape({}).isRequired,
   index: PropTypes.number.isRequired,
   completeTask: PropTypes.func,
   removeTask: PropTypes.func,
 };
 
 Task.defaultProps = {
-  task: "",
   completeTask: () => {},
   removeTask: () => {},
 };
