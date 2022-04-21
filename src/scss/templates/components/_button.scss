@@ -1,0 +1,32 @@
+.btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--candy-red);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  transition: var(--average-transition);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &[active] {
+    background-color: var(--imperial-red);
+  }
+
+  &[outline] {
+    color: var(--gunmetal);
+    background-color: transparent;
+    border: 1px solid var(--gunmetal);
+  }
+}

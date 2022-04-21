@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import uuid from "react-uuid";
 
 import { NavItems, NavItemsAdditional } from "../data/NavItems";
 
@@ -16,7 +18,7 @@ export const Nav = ({ className }) => {
         {NavItems &&
           NavItems.map(({ title, link }) => {
             return (
-              <li className="nav__item">
+              <li className="nav__item" key={uuid()}>
                 <NavLink
                   className={({ isActive }) =>
                     isActive
@@ -37,7 +39,7 @@ export const Nav = ({ className }) => {
           {NavItemsAdditional &&
             NavItemsAdditional.map(({ title, link }) => {
               return (
-                <li className="nav__item-additional">
+                <li className="nav__item-additional" key={uuid()}>
                   <NavLink
                     className={({ isActive }) =>
                       isActive

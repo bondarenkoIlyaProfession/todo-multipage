@@ -74,5 +74,23 @@
 
   & &__search {
     padding-left: 40px;
+    transition: var(--average-transition);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header {
+    & &__search {
+      width: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header {
+    & &__search {
+      width: 100px;
+      padding-left: 30px;
+    }
   }
 }

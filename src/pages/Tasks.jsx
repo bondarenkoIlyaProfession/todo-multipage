@@ -2,7 +2,7 @@ import React from "react";
 
 import projectPlanning from "../assets/images/projectPlanning.svg";
 
-import { Image, AddTask, Tag } from "../components";
+import { Image, Tag, Todo } from "../components";
 
 import { TagItems } from "../data/TagItems";
 
@@ -26,9 +26,7 @@ export const Tasks = () => {
             </div>
           </div>
 
-          <div className="tasks__add-tasks">
-            <AddTask />
-          </div>
+          <Todo />
 
           <div className="tasks__status">
             <div className="tasks__status-inner">

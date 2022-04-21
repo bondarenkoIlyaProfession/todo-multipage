@@ -14,7 +14,7 @@ export const App = ({ children }) => {
       <Aside isAside={isAside} />
 
       <div className={isAside ? "content" : "content content-only"}>
-        <Main key="main">{children}</Main>
+        <Main>{children}</Main>
       </div>
     </>
   );

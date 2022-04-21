@@ -1,7 +1,9 @@
 .add-task {
   display: flex;
   align-items: center;
+  padding: 20px 0;
   color: var(--gunmetal);
+  user-select: none;
   transition: var(--average-transition);
 
   &:hover {
@@ -9,9 +11,95 @@
     cursor: pointer;
   }
 
-  &-icon {
+  &__icon {
     display: flex;
     align-items: center;
     margin-right: 10px;
+  }
+
+  &__editor {
+    display: none;
+    padding: 20px 0;
+
+    &-active {
+      display: block;
+    }
+  }
+
+  &__content {
+    padding: 10px;
+    border: 1px solid var(--gunmetal);
+    border-radius: 10px;
+  }
+
+  &__areas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+
+    & textarea {
+      height: 50px;
+      font-family: var(--font-family-common);
+      font-size: 16px;
+      border: none;
+      outline: none;
+    }
+
+    .title-area {
+      height: 20px;
+    }
+  }
+
+  &__list {
+    @include display-flex;
+
+    &-left,
+    &-right {
+      @include display-flex;
+    }
+  }
+
+  &__buttons {
+    @include display-flex;
+
+    width: 200px;
+    margin-top: 30px;
+    transition: var(--average-transition);
+
+    & .btn {
+      font-family: var(--font-family-common);
+    }
+  }
+}
+
+.tags__item-without-text > div {
+  padding-right: 0;
+}
+
+@media screen and (max-width: 1260px) {
+  .add-task {
+    &__content {
+      width: 95%;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .add-task {
+    justify-content: center;
+
+    &__areas {
+      height: 110px;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__buttons {
+      width: 95%;
+    }
   }
 }

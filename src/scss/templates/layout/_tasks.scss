@@ -3,11 +3,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     padding-top: 60px;
   }
 
   &__title {
     font-size: 26px;
+  }
+
+  &__tags-item.tags__item:last-child {
+    margin-right: 0;
   }
 
   &__status {
@@ -39,5 +44,35 @@
 
   &__add-tasks {
     padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .tasks {
+    &__header {
+      max-width: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .tasks {
+    & .tags__item-icon {
+      padding-right: 0;
+    }
+
+    .tag__item-text {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .tasks {
+    &__header {
+      flex-direction: column;
+      justify-content: space-between;
+      height: 140px;
+    }
   }
 }

@@ -11,3 +11,26 @@ export const TagItems = [
   { tagText: "View", icon: <BsSliders size="20px" /> },
   { tagText: "More", icon: <BsThreeDots size="20px" /> },
 ];
+
+export const TagItemsAddTaskLeft = [
+  { tagText: "0", icon: <BsThreeDots size="20px" /> },
+  { tagText: "1", icon: <BsThreeDots size="20px" /> },
+];
+
+export const TagItemsAddTaskRight = [
+  {
+    tagText: "",
+    icon: <BsThreeDots size="20px" />,
+    className: "tags__item-without-text",
+  },
+  {
+    tagText: "",
+    icon: <BsThreeDots size="20px" />,
+    className: "tags__item-without-text",
+  },
+  {
+    tagText: "",
+    icon: <BsThreeDots size="20px" />,
+    className: "tags__item-without-text",
+  },
+];

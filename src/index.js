@@ -7,6 +7,7 @@ import "./scss/styles.scss";
 import { App } from "./App";
 
 import { Tasks, Today, Personal, Work, GroceryStore, Error } from "./pages";
+import { Sandbox } from "./components";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
           <Route path="/additional/work" element={<Work />} />
           <Route path="/additional/grocery-store" element={<GroceryStore />} />
           <Route path="*" element={<Error />} />
+          <Route path="/sandbox" element={<Sandbox />} />
         </Routes>
       </App>
     </Router>

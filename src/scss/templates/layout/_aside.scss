@@ -3,15 +3,19 @@
   top: 0;
   bottom: 0;
   left: -358px;
+  padding: 100px 0 0 50px;
   width: 358px;
   height: 100vh;
-  padding: 100px 0 0 50px;
   background-color: var(--lotion);
   transition: var(--average-transition);
 
   &-active {
     left: 0;
     transition: var(--average-transition);
+
+    & .btn[disabled] {
+      z-index: -1;
+    }
   }
 
   &-inner {
@@ -85,6 +89,17 @@
           background-color: var(--anti-flash-white);
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .aside {
+    left: -100vw;
+    width: 100vw;
+
+    &-active {
+      left: 0;
     }
   }
 }

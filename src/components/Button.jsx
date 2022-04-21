@@ -8,11 +8,12 @@ export const Button = ({
   className,
   disabled,
   active,
+  outline,
   ...attrs
 }) => {
   const onClickAction = (e) => (disabled ? e.preventDefault() : onClick(e));
 
-  const classes = classNames("btn", className, { active });
+  const classes = classNames("btn", className, { active }, { outline });
 
   const Tag = attrs.to ? "Link" : "button";
 
@@ -34,6 +35,7 @@ Button.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   active: PropTypes.bool,
+  outline: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -42,4 +44,5 @@ Button.defaultProps = {
   className: "",
   disabled: false,
   active: false,
+  outline: false,
 };

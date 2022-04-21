@@ -1,12 +1,13 @@
 :root {
   --white: #fff;
-  --gunmetal: #2b2d42;
-  --cool-grey: #8d99ae;
+  --lotion: #fafafa;
   --anti-flash-white: #edf2f4;
+  --light-pink: #fde9ec;
+  --cool-grey: #8d99ae;
+  --grey: #888;
   --imperial-red: #ef233c;
   --candy-red: #d90429;
-  --lotion: #fafafa;
-  --grey: #888;
+  --gunmetal: #2b2d42;
   --background-primary: rgba(255 255 255 / 30.2%);
   --background-secondary: #eee;
 
@@ -14,7 +15,7 @@
   --average-transition: all 0.3s ease-in-out;
 
   // font-families (for stylelint)
-  --font-family-common: 'SF Rounded';
+  --font-family-common: "SF Rounded";
 }
 
 @mixin aside-title {
@@ -27,4 +28,10 @@
   text-transform: capitalize;
   background-color: transparent;
   border-radius: 3px;
+}
+
+@mixin display-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

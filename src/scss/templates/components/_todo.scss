@@ -1,0 +1,56 @@
+.task {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  padding: 5px 0;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    margin-right: 50px;
+  }
+
+  &__status {
+    width: 8px;
+    height: 8px;
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid var(--gunmetal);
+    border-radius: 50%;
+    transition: var(--average-transition);
+
+    &-filled {
+      background-color: var(--imperial-red);
+      border-color: var(--imperial-red);
+    }
+  }
+
+  &__remove {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--imperial-red);
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__title,
+  &__description {
+    width: 650px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1485px) {
+  .task {
+    width: 600px;
+  }
+}
