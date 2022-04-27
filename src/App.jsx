@@ -4,16 +4,25 @@ import PropTypes from "prop-types";
 import { Header, Aside, Main } from "./layout";
 
 export const App = ({ children }) => {
-  const [isAside, setIsAside] = useState(true);
+  const [isAsideActive, setIsAsideActive] = useState(true);
+  const [isModalActive, setIsModalActive] = useState(false);
+  const [modalName, setModalName] = useState(null);
 
-  const toggleAside = () => setIsAside(!isAside);
+  const toggleAside = () => setIsAsideActive(!isAsideActive);
 
   return (
     <>
-      <Header toggleAside={toggleAside} />
-      <Aside isAside={isAside} />
+      <Header
+        isAsideActive={isAsideActive}
+        toggleAside={toggleAside}
+        isModalActive={isModalActive}
+        setIsModalActive={setIsModalActive}
+        modalName={modalName}
+        setModalName={setModalName}
+      />
+      <Aside isAsideActive={isAsideActive} />
 
-      <div className={isAside ? "content" : "content content-only"}>
+      <div className={isAsideActive ? "content" : "content content-only"}>
         <Main>{children}</Main>
       </div>
     </>
@@ -21,5 +30,9 @@ export const App = ({ children }) => {
 };
 
 App.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
+};
+
+App.defaultProps = {
+  children: null,
 };

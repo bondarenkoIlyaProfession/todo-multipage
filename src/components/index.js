@@ -4,5 +4,6 @@ export { Image } from "./Image";
 export { Accordion } from "./Accordion";
 export { Nav } from "./Nav";
 export { TagItem, Tag } from "./Tag";
-export { Todo } from "./Todo";
+export { Todo, CreateTask, Task } from "./Todo";
+export { Modal } from "./Modal/Modal";
 export { Sandbox } from "./Sandbox";

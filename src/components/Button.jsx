@@ -15,17 +15,16 @@ export const Button = ({
 
   const classes = classNames("btn", className, { active }, { outline });
 
-  const Tag = attrs.to ? "Link" : "button";
-
   return (
-    <Tag
+    <button
       {...attrs}
       className={classes}
       disabled={disabled}
       onClick={onClickAction}
+      type="button"
     >
       {children}
-    </Tag>
+    </button>
   );
 };
 

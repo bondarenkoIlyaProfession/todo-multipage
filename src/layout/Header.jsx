@@ -1,35 +1,44 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { Link } from "react-router-dom";
 
 import {
-  BsHouseDoor,
+  BsArrowLeftCircleFill,
+  BsHouseDoorFill,
   BsPlusLg,
-  BsFillPersonFill,
+  BsPersonFill,
   BsSearch,
+  BsQuestionCircleFill,
 } from "react-icons/bs";
 
-import { Input } from "../components";
+import { Modal, Input } from "../components";
 
-export const Header = ({ toggleAside }) => {
+export const Header = (props) => {
+  const { isAsideActive, toggleAside, setIsModalActive, setModalName } = props;
+
+  const openCreateTaskModal = () => {
+    setIsModalActive(true);
+    setModalName("create task");
+  };
+
   return (
     <header className="header">
       <div className="container">
         <div className="header-inner">
           <div className="header-left">
             <div
-              className="header__action header__hamburger-menu"
+              className={
+                isAsideActive
+                  ? "header__action header__hamburger-menu"
+                  : "header__action header__hamburger-menu rotated"
+              }
               onClick={toggleAside}
-              aria-hidden="true"
             >
-              <span className="header__hamburger-menu-bar" />
-              <span className="header__hamburger-menu-bar" />
-              <span className="header__hamburger-menu-bar" />
+              <BsArrowLeftCircleFill size="20px" />
             </div>
 
             <Link to="/" className="header__action header__house">
-              <BsHouseDoor size="20px" title="Home Page" />
+              <BsHouseDoorFill size="20px" title="Home Page" />
             </Link>
 
             <form className="header__form">
@@ -48,23 +57,37 @@ export const Header = ({ toggleAside }) => {
           </div>
 
           <div className="header-right">
-            <div className="header__action header__add-task">
+            <div
+              className="header__action header__add-task"
+              onClick={openCreateTaskModal}
+            >
               <BsPlusLg size="16px" title="Add a task" />
             </div>
+            <div className="header__action header__support">
+              <BsQuestionCircleFill size="20px" title="Support" />
+            </div>
             <div className="header__action header__user">
-              <BsFillPersonFill size="20px" title="User opportunities" />
+              <BsPersonFill size="20px" title="User opportunities" />
             </div>
           </div>
         </div>
       </div>
+
+      <Modal {...props} />
     </header>
   );
 };
 
 Header.propTypes = {
+  isAsideActive: PropTypes.bool,
   toggleAside: PropTypes.func,
+  setIsModalActive: PropTypes.func,
+  setModalName: PropTypes.func,
 };
 
 Header.defaultProps = {
-  toggleAside: "",
+  isAsideActive: true,
+  toggleAside: () => {},
+  setIsModalActive: () => {},
+  setModalName: () => {},
 };

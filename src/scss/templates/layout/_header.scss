@@ -32,28 +32,19 @@
     }
   }
 
-  &__hamburger-menu {
-    &-bar {
-      display: block;
-      width: 20px;
-      height: 2px;
-      margin: 3px 0;
-      background-color: var(--white);
-      transition: var(--average-transition);
-    }
-
-    &:hover &-bar {
-      background-color: var(--anti-flash-white);
-    }
-  }
-
+  &__hamburger-menu,
   &__house,
   &__add-task,
-  &__user {
+  &__user,
+  &__support {
     display: flex;
     align-items: center;
     color: var(--white);
     transition: var(--average-transition);
+  }
+
+  &__hamburger-menu.rotated {
+    transform: rotate(180deg);
   }
 
   &__add-task {

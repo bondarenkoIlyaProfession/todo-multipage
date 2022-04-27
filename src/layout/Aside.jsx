@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 import { Nav } from "../components";
 
-export const Aside = ({ isAside }) => {
+export const Aside = ({ isAsideActive }) => {
   return (
-    <aside className={isAside ? "aside aside-active" : "aside"}>
+    <aside className={isAsideActive ? "aside aside-active" : "aside"}>
       <div className="aside-inner">
         <Nav className="aside__nav" />
       </div>
@@ -14,9 +14,9 @@ export const Aside = ({ isAside }) => {
 };
 
 Aside.propTypes = {
-  isAside: PropTypes.bool,
+  isAsideActive: PropTypes.bool,
 };
 
 Aside.defaultProps = {
-  isAside: true,
+  isAsideActive: true,
 };

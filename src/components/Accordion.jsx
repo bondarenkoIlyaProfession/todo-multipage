@@ -11,11 +11,7 @@ export const Accordion = ({ children, title, className }) => {
 
   return (
     <div className={classes}>
-      <div
-        className="accordion__title"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-hidden="true"
-      >
+      <div className="accordion__title" onClick={() => setIsOpen(!isOpen)}>
         <span>{title}</span>
 
         <div className="accordion__toggle-inner">

@@ -1,4 +1,4 @@
-import React from "react"; // ESLint gives an error due to the absence of this import
+import React from "react";
 
 import {
   BsChatRightTextFill,
@@ -26,16 +26,16 @@ export const TagItemsAddTaskRight = [
   {
     tagText: "",
     icon: <BsTagsFill size="20px" />,
-    className: "tags__item-without-text",
+    className: "tags__item-right",
   },
   {
     tagText: "",
     icon: <BsFlagFill size="20px" />,
-    className: "tags__item-without-text",
+    className: "tags__item-right",
   },
   {
     tagText: "",
     icon: <BsAlarmFill size="20px" />,
-    className: "tags__item-without-text",
+    className: "tags__item-right",
   },
 ];
