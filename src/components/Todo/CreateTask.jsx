@@ -79,7 +79,9 @@ export const CreateTask = ({ addTask }) => {
             Add Task
           </Button>
 
-          <Button onClick={addTaskEditorHandler}>Cancel</Button>
+          <Button onClick={addTaskEditorHandler} outline>
+            Cancel
+          </Button>
         </div>
       </form>
     </div>

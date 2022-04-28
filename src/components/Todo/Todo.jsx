@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { Task } from "./Task";
 import { CreateTask } from "./CreateTask";
 
+const getLocalItem = () => {
+  const list = localStorage.getItem("tasks");
+
+  if (list) {
+    return JSON.parse(list);
+  }
+  return [];
+};
+
 export const Todo = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(getLocalItem());
 
   const addTask = (title, description) => {
     const newTasks = [...tasks, { title, description, completed: false }];
@@ -31,6 +40,10 @@ export const Todo = () => {
     newTasks.splice(currentTask, 1);
     setTasks(newTasks);
   };
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <div>

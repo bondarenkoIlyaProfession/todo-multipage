@@ -20,11 +20,11 @@
     }
   }
 
-  &[active] {
+  &.active {
     background-color: var(--imperial-red);
   }
 
-  &[outline] {
+  &.outline {
     color: var(--gunmetal);
     background-color: transparent;
     border: 1px solid var(--gunmetal);

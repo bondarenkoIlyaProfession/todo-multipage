@@ -1,3 +1,4 @@
+/* eslint-disable react/style-prop-object */
 import React from "react";
 import PropTypes, { shape } from "prop-types";
 
@@ -15,7 +16,6 @@ export const Task = ({ task, index, completeTask, removeTask }) => {
           Remove
         </div>
       </div>
-
       <div className="task__content">
         <div className="task__title">{task.title}</div>
         <div className="task__description">{task.description}</div>
