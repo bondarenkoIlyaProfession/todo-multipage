@@ -2,10 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
+import { useDisableBodyScroll } from "../../hooks";
+
 import { CreateTask, TaskInfo } from "./Modals";
 
 export const Modal = (props) => {
   const { className, isModalActive, setIsModalActive, modalName } = props;
+
+  useDisableBodyScroll(isModalActive);
 
   const classes = classNames(
     isModalActive ? "modal active" : "modal",
@@ -25,11 +29,13 @@ export const Modal = (props) => {
 
   return (
     <div className={classes} onClick={() => setIsModalActive(false)}>
-      <div
-        className={isModalActive ? "modal__content active" : "modal__content"}
-        onClick={(e) => e.stopPropagation()}
-      >
-        {returnModalComponent(modalName)}
+      <div className="modal__body">
+        <div
+          className={isModalActive ? "modal__content active" : "modal__content"}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {returnModalComponent(modalName)}
+        </div>
       </div>
     </div>
   );
