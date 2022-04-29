@@ -5,10 +5,10 @@ import { Task } from "./Task";
 import { CreateTask } from "./CreateTask";
 
 const getLocalItem = () => {
-  const list = localStorage.getItem("tasks");
+  const taskList = localStorage.getItem("tasks");
 
-  if (list) {
-    return JSON.parse(list);
+  if (taskList) {
+    return JSON.parse(taskList);
   }
   return [];
 };
