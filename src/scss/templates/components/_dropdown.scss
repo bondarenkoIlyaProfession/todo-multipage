@@ -1,0 +1,17 @@
+.dropdown {
+  position: absolute;
+  z-index: 1;
+  max-height: 300px;
+  padding: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--white);
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+  transition: var(--average-transition);
+  transform: scale(0);
+
+  &.active {
+    transform: scale(1);
+  }
+}

@@ -11,14 +11,32 @@ import {
   BsQuestionCircleFill,
 } from "react-icons/bs";
 
-import { Modal, Input } from "../components";
+import { Input, Dropdown, Modal } from "../components";
 
 export const Header = (props) => {
-  const { isAsideActive, toggleAside, setIsModalActive, setModalName } = props;
+  const {
+    isAsideActive,
+    toggleAside,
+    setIsModalActive,
+    setModalName,
+    isDropdownActive,
+    setIsDropdownActive,
+    setDropdownName,
+  } = props;
 
   const openCreateTaskModal = () => {
     setIsModalActive(true);
     setModalName("create task");
+  };
+
+  const openSupportDropdown = () => {
+    setIsDropdownActive(!isDropdownActive);
+    setDropdownName("support");
+  };
+
+  const openUserDropdown = () => {
+    setIsDropdownActive(!isDropdownActive);
+    setDropdownName("user");
   };
 
   return (
@@ -63,10 +81,16 @@ export const Header = (props) => {
             >
               <BsPlusLg size="16px" title="Add a task" />
             </div>
-            <div className="header__action header__support">
+            <div
+              className="header__action header__support"
+              onClick={openSupportDropdown}
+            >
               <BsQuestionCircleFill size="20px" title="Support" />
             </div>
-            <div className="header__action header__user">
+            <div
+              className="header__action header__user"
+              onClick={openUserDropdown}
+            >
               <BsPersonFill size="20px" title="User opportunities" />
             </div>
           </div>
@@ -74,6 +98,7 @@ export const Header = (props) => {
       </div>
 
       <Modal {...props} />
+      <Dropdown {...props} />
     </header>
   );
 };
@@ -83,6 +108,9 @@ Header.propTypes = {
   toggleAside: PropTypes.func,
   setIsModalActive: PropTypes.func,
   setModalName: PropTypes.func,
+  isDropdownActive: PropTypes.bool,
+  setIsDropdownActive: PropTypes.func,
+  setDropdownName: PropTypes.func,
 };
 
 Header.defaultProps = {
@@ -90,4 +118,7 @@ Header.defaultProps = {
   toggleAside: () => {},
   setIsModalActive: () => {},
   setModalName: () => {},
+  isDropdownActive: false,
+  setIsDropdownActive: () => {},
+  setDropdownName: () => {},
 };

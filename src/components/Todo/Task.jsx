@@ -1,4 +1,3 @@
-/* eslint-disable react/style-prop-object */
 import React from "react";
 import PropTypes, { shape } from "prop-types";
 

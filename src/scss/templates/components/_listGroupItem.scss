@@ -1,0 +1,35 @@
+.list__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  padding: 10px 20px;
+  margin: 3px 0;
+  border-radius: 4px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--background-secondary);
+  }
+
+  &-title {
+    font-size: 14px;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: transparent;
+    opacity: 0.5;
+  }
+
+  &.active {
+    color: #fff;
+    background-color: var(--imperial-red);
+  }
+}

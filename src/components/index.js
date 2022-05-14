@@ -6,4 +6,5 @@ export { Nav } from "./Nav";
 export { TagItem, Tag } from "./Tag";
 export { Todo, CreateTask, Task } from "./Todo";
 export { Modal } from "./Modal/Modal";
+export { Dropdown } from "./Dropdown/Dropdown";
 export { Sandbox } from "./Sandbox";

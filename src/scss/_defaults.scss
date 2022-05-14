@@ -6,6 +6,17 @@
   margin: 0;
 }
 
+*::-webkit-scrollbar {
+  width: 4px;
+  background-color: var(--gunmetal);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--imperial-red);
+  border-radius: 4px;
+}
+
 a {
   text-decoration: none;
 }
@@ -37,17 +48,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-::-webkit-scrollbar {
-  width: 4px;
-  background-color: var(--gunmetal);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--imperial-red);
-  border-radius: 4px;
 }
 
 .content {

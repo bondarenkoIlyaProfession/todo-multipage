@@ -5,7 +5,7 @@ import { Task } from "./Task";
 import { CreateTask } from "./CreateTask";
 
 const getLocalItem = () => {
-  const taskList = localStorage.getItem("tasks");
+  const taskList = localStorage.getItem("all-tasks");
 
   if (taskList) {
     return JSON.parse(taskList);
@@ -42,7 +42,7 @@ export const Todo = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("all-tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   return (

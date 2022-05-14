@@ -9,6 +9,8 @@ export const App = ({ children }) => {
   );
   const [isModalActive, setIsModalActive] = useState(false);
   const [modalName, setModalName] = useState(null);
+  const [isDropdownActive, setIsDropdownActive] = useState(false);
+  const [dropdownName, setDropdownName] = useState(null);
 
   const toggleAside = () => setIsAsideActive(!isAsideActive);
 
@@ -25,6 +27,10 @@ export const App = ({ children }) => {
         setIsModalActive={setIsModalActive}
         modalName={modalName}
         setModalName={setModalName}
+        isDropdownActive={isDropdownActive}
+        setIsDropdownActive={setIsDropdownActive}
+        dropdownName={dropdownName}
+        setDropdownName={setDropdownName}
       />
       <Aside isAsideActive={isAsideActive} />
 
